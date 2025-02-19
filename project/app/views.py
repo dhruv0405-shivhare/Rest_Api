@@ -42,7 +42,7 @@ def stu_details(request, pk):
     Retrieve, update or delete a code snippet.
     """
     try:
-        snippet = Student.objects.get(pk=pk)
+        snippet = Student.objects.get(id=pk)
     except Student.DoesNotExist:
         return HttpResponse(status=404)
 
